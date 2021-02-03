@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- our styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2 class="loading" >Sci-SYS</h2>
+  <div  id="side">
+  <div id="mysidenav" class="sidenav">
+  <a href="#" class="closebtn" onclick="closenav()">&times;</a>
+  <a href="#"><details>
+    <summary>physics</summary> <br>
+   <summary>
+   section 1
+  </summary><br>
+  section 2
+  </details>
+  </a>
+  <a href="#"><details>
+      <summary>chemistry</summary> <br>
+     <summary>
+     section 1
+    </summary><br>
+    section 2
+    </details>
+    </a>
+    <a href="#"><details>
+        <summary>biology</summary> <br>
+       <summary>
+       section 1
+      </summary><br>
+      section 2
+      </details>
+      </a>
+  </div>
+  <div id="main">
+<span onclick="opennav()">
+&#9776;
+</span>
+  </div>
+</div>
+  <!-- -------------------------------------------------------------------------------------------------------------------- -->
+<div id="site">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+  <div class="container-fluid" >
+  <ul>
+<li><a >physics</a>
+<ul>
+ <li><a href="#">section 1</a></li>
+ <li><a href="#">section 2</a></li>
+</ul>
+  </li>
+<li><a>chemistry</a>
+<ul>
+ <li><a href="#">section 1</a></li>
+ <li><a href="#">section 2</a></li>
+</ul>
+  </li> 
+<li><a>biology</a>
+<ul>
+ <li><a href="#">section 1</a></li>
+ <li><a href="#">section 2</a></li>
+</ul>
+  </li>
+  </ul>
+
+  </div>
+</nav>
+</div>
+
+<!-- cards section -->
+  <div class="cards-section row justify-content-center align-items-center mt-7 mb-5">
+    <div class="cards card1 col-sm-5 col-md-4 col-xl-3 col-9">
+      <div class="img"></div>
+      <div class="card-text">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="row pr-3 d-flex justify-content-end">
+          <button class="btn btn-primary btn-sm card-btn">Read more</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- <footer>
+  hello world
+  <div class="col-md-4 col-sm-6 footerleft "></div>
+ </footer> -->
+  <!-- bootstrap Js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
