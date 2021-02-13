@@ -1,13 +1,21 @@
 const hamburger = document.querySelector(".hamburger");
 const navlinks = document.querySelector(".nav-links");
-const links = document.querySelector(".nav-links-li");
+const navbar = document.querySelector(".nav-bar");
 
-hamburger.addEventListener("onclick", () =>{
-  console.log("u clicked me!!");
+// toggling the navbar on mobile screens
+hamburger.addEventListener("click", () =>{
   navlinks.classList.toggle("open");
 });
 
-function toggleClass() {
-  console.log("hello there");
-  navlinks.classList.toggle("open");
-};
+// changing the navbar bg on scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navbar.style.backgroundColor = "var(--dark-blue)";
+    navbar.style.boxShadow = "0 0 30px var(--dark-blue)";    
+  } else {
+    navbar.style.backgroundColor = "transparent";
+    navbar.style.boxShadow = "none";
+  }
+}
