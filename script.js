@@ -1,5 +1,5 @@
 const hamburger = document.querySelector(".hamburger");
-const navlinks = document.querySelector(".nav-links");
+const navlinks = document.querySelector(".sm-nav-links");
 const navbar = document.querySelector(".nav-bar");
 
 // toggling the navbar on mobile screens
