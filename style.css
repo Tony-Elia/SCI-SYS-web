@@ -465,10 +465,9 @@ hr {
 .header-text h1 text{
 	font-family: 'Fredoka One';
 	stroke-width: 0px;
-    stroke: var(--light-green);
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 100%;
-	animation: strokeAnim 5s ease-out .5s backwards;
+    stroke: white;
+    stroke-dasharray: 250;
+	animation: strokeAnim 3s 1s backwards;
 }
 
 .header button {
@@ -494,10 +493,10 @@ hr {
 
 @keyframes strokeAnim {
 	0% {
-		stroke-dashoffset: 1000;
+		stroke-dashoffset: 250;
 		stroke-width: 2px;
 		fill: transparent;
-	} 80% {
+	} 90% {
 		stroke-dashoffset: 0;
 		fill: transparent;
 		stroke-width: 2px;
