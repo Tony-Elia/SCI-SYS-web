@@ -5,14 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- our styles -->
       <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="script.js">
-      <!-- bootstrap css -->
+      <!-- External css -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Sci-Sys - Home</title>
    </head>
    <body>
+
       <!-- navigation bar -->
       <div class="nav-bar">
          <a class="logo pl-1" href="#">
@@ -45,7 +47,7 @@
          </div>
          <ul class="nav-links">
             <li class="navbar-btn active">
-               <a href="#"><span class="fa fa-home"></span> Home </span></a>
+               <a href="#"><span class="fa fa-home"></span> Home</a>
             </li>
             <li class="navbar-btn dropdown">
                <a href="#"> Articles <span class="fa fa-angle-down"></span></a>
@@ -58,38 +60,37 @@
                </ul>
             </li>
             <li class="navbar-btn">
-               <a class="dropbtn" href="#"> <span class="fa fa-question-circle"></span> About Us</span></a>
+               <a class="dropbtn" href="#"> <span class="fa fa-question-circle"></span> About Us</a>
             </li>
             <li id="signBtn" class="navbar-btn">
-              <a href="#">Sign in</a>
+               <a href="#">Sign in</a>
             </li>
          </ul>
          <ul class="sm-nav-links list-unstyled justify-content-center align-items-center">
-           <li class="sm-nav-link active"><a class="text-decoration-none" href="#"><span class="fa fa-home"></span> Home </a></li>
-           <li class="sm-nav-link">
-             <a data-toggle="collapse" data-target="#articles" class="text-decoration-none" href="#"> Articles <span class="fa fa-angle-down"></span></a>
-             <ul id="articles" class="col list-unstyled collapse justify-content-center align-items-center">
-                <li><a class="text-decoration-none" href="#"> Articles Main Page </a></li>
-                <li><a class="text-decoration-none" href="#"> Physics </a></li>
-                <li><a class="text-decoration-none" href="#"> Chemistry </a></li>
-                <li><a class="text-decoration-none" href="#"> Biology </a></li>
-                <li><a class="text-decoration-none" href="#"> Astrology </a></li>
-                <li><a class="text-decoration-none" href="#"> Psycology </a></li>
-             </ul>
+            <li class="sm-nav-link active"><a class="text-decoration-none" href="#"><span class="fa fa-home"></span> Home </a></li>
+            <li class="sm-nav-link">
+               <a data-toggle="collapse" data-target="#articles" class="text-decoration-none" href="#"> Articles <span class="fa fa-angle-down"></span></a>
+               <ul id="articles" class="col list-unstyled collapse justify-content-center align-items-center">
+                  <li><a class="text-decoration-none" href="#"> Articles Main Page </a></li>
+                  <li><a class="text-decoration-none" href="#"> Physics </a></li>
+                  <li><a class="text-decoration-none" href="#"> Chemistry </a></li>
+                  <li><a class="text-decoration-none" href="#"> Biology </a></li>
+                  <li><a class="text-decoration-none" href="#"> Astrology </a></li>
+                  <li><a class="text-decoration-none" href="#"> Psycology </a></li>
+               </ul>
             </li>
-           <li class="sm-nav-link"><a class="text-decoration-none" href="#"><span class="fa fa-question-circle"></span> About US </a></li>
-           <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="#"> Sign in </a></li>
+            <li class="sm-nav-link"><a class="text-decoration-none" href="#"><span class="fa fa-question-circle"></span> About US </a></li>
+            <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="#"> Sign in </a></li>
          </ul>
       </div>
 
-      
       <!-- Header Section -->
       <div class="header">
          <div class="header-text col-md-5 col-sm-6 col-11 text-center text-sm-left">
             <h1 class="h1 mb-sm-4 mb-3">
                <svg height="300" width="200">
                   <text x="120" y="60" fill="white">SCI-SYS</text>
-                </svg>
+               </svg>
             </h1>
             <p class="header-sub-text pop-l">
                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto vel reiciendis unde quod.
@@ -99,23 +100,35 @@
                <button class="btn btn-primary btn-sm card-btn text-sm">Read more <span class="fa fa-angle-right"></span></button>
             </div>
          </div>
+         <div class="bottom-fade"></div>
       </div>
 
       <!-- Main part -->
       <div class="main pt-5">
-         <div class="intro container">
-            <div class="col align-items-center justify-content-center text-center">
+         <div class="atoms">
+            <img src="./assets/atom1.png" alt="">
+            <img src="./assets/atom2.png" alt="">
+         </div>
+         <div class="dna">
+            <img src="./assets/dna.png" alt="">
+            <img src="./assets/dna.png" alt="">
+            <img src="./assets/dna.png" alt="">
+            <img src="./assets/dna.png" alt="">
+            <img src="./assets/dna.png" alt="">
+         </div>
+         <div class="intro">
+            <div class="col align-items-center justify-content-center text-center no-gutters">
                <div class="row align-items-center justify-content-center">
                   <span class="fa fa-align-right warm-terq"></span>
-                  <h3 class="mr-4 ml-4 bold-arial">Our Parteners</h3>
+                  <h3 class="mr-4 ml-4 bold-poppin">Our Parteners</h3>
                   <span class="fa fa-align-left warm-terq"></span>
                </div>
                <div class="parteners row mt-5 justify-content-center">
-                  <img class="m-3" src="./assets/card1-img.jpg" alt="">
-                  <img class="m-3" src="./assets/card1-img.jpg" alt="">
-                  <img class="m-3" src="./assets/card1-img.jpg" alt="">
-                  <img class="m-3" src="./assets/card1-img.jpg" alt="">
-                  <img class="m-3" src="./assets/card1-img.jpg" alt="">
+                  <img class="m-sm-3 m-2" src="./assets/card1-img.jpg" alt="">
+                  <img class="m-sm-3 m-2" src="./assets/card1-img.jpg" alt="">
+                  <img class="m-sm-3 m-2" src="./assets/card1-img.jpg" alt="">
+                  <img class="m-sm-3 m-2" src="./assets/card1-img.jpg" alt="">
+                  <img class="m-sm-3 m-2" src="./assets/card1-img.jpg" alt="">
                </div>
             </div>
          </div>
@@ -124,7 +137,7 @@
          <div class="social-media ml-3 mr-3 ml-md-5 mr-md-5 pt-7">
             <div class="row align-items-center justify-content-center">
                <span class="gg-shape gg-before mb-2"></span>
-               <h3 class="mr-4 ml-4 bold-arial text-center">Our Social Media</h3>
+               <h3 class="mr-4 ml-4 bold-poppin text-center">Our Social Media</h3>
                <span class="gg-shape gg-after mb-2"></span>
             </div>
             <div class="row align-items-center justify-content-center mt-5">
@@ -239,7 +252,7 @@
                </div>
             </div>
          </div>
-         
+
          <!-- cards section -->
          <div class="cards-section row justify-content-center align-items-center ml-3 mr-3 ml-md-5 mr-md-5 pt-7 pb-7">
             <div class="cards card1">
@@ -287,7 +300,137 @@
                </div>
             </div>
          </div>
+
+         <!-- science section -->
+         <div class="science-sections row justify-content-center align-items-center ml-3 mr-3 ml-md-5 mr-md-5 pb-7">
+            <div class="science-cards ml-xl-5 mr-xl-5">
+               <div class="sci-card">
+                  <div class="card-img" data-text="Psycology">
+                     <img src="./assets/heart.png" alt="">
+                  </div>
+                  <div class="card-content">
+                     <h2 class="bold-poppin mt-3 mb-4">Psycology</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, dolorem sequi! Doloribus, beatae fuga. Possimus expedita asperiores recusandae error.
+                     </p>
+                     <a class="btn btn-primary btn-sm text-sm" href="#">Psycology main page</a>
+                  </div>
+               </div>
+               <div class="sci-card">
+                  <div class="card-img" data-text="Physics">
+                     <img src="./assets/pendulum.png" alt="">
+                  </div>
+                  <div class="card-content">
+                     <h2 class="bold-poppin mt-3 mb-4">Physics</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, dolorem sequi! Doloribus, beatae fuga. Possimus expedita asperiores recusandae error.
+                     </p>
+                     <a class="btn btn-bordered-terq btn-sm text-sm" href="#">Physics main page</a>
+                  </div>
+               </div>
+               <div class="sci-card">
+                  <div class="card-img" data-text="Chemistry">
+                     <img src="./assets/chemistry.png" alt="">
+                  </div>
+                  <div class="card-content">
+                     <h2 class="bold-poppin mt-3 mb-4">Chemistry</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, dolorem sequi! Doloribus, beatae fuga. Possimus expedita asperiores recusandae error.
+                     </p>
+                     <a class="btn btn-primary btn-sm text-sm" href="#">Chemistry main page</a>
+                  </div>
+               </div>
+               <div class="sci-card">
+                  <div class="card-img" data-text="Biology">
+                     <img src="./assets/protist.png" alt="">
+                  </div>
+                  <div class="card-content">
+                     <h2 class="bold-poppin mt-3 mb-4">Biology</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, dolorem sequi! Doloribus, beatae fuga. Possimus expedita asperiores recusandae error.
+                     </p>
+                     <a class="btn btn-bordered-terq btn-sm text-sm" href="#">Biology main page</a>
+                  </div>
+               </div>
+               <div class="sci-card">
+                  <div class="card-img" data-text="Astrology">
+                     <img src="./assets/telescope.png" alt="">
+                  </div>
+                  <div class="card-content">
+                     <h2 class="bold-poppin mt-3 mb-4">Astrology</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quam, dolorem sequi! Doloribus, beatae fuga. Possimus expedita asperiores recusandae error.
+                     </p>
+                     <a class="btn btn-primary btn-sm text-sm" href="#">Astrology main page</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Meet the team section -->
+         <div id="meetTeam" class="meet-team row justify-content-center align-items-center ml-3 mr-3 ml-md-5 mr-md-5 pb-7">
+            <div class="col-12 title">
+               <h2 class="bold-poppin">
+                  <span>Meet</span>
+                  the Team
+               </h2>
+            </div>
+            <div class="mem-card">
+               <div class="mem-img mb-4">
+                  <img class="img-fluid" src="./assets/card1-img.jpg" alt="">
+               </div>
+               <div class="mem-card-content">
+                  <h4 class="mb-4 font-weight-bold"> <span>Founder</span> <br> Mohamed Sherif</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Voluptatibus quasi voluptates recusandae fugit est itaque ipsa,
+                     dignissimos ea dolorum
+                  </p>
+               </div>
+            </div>
+            <div class="mem-card alternate">
+               <div class="mem-img mb-4">
+                  <img class="img-fluid" src="./assets/card1-img.jpg" alt="">
+               </div>
+               <div class="mem-card-content">
+                  <h4 class="mb-4 font-weight-bold"> <span>Co-Founder</span> <br> Mohamed Sherif</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Voluptatibus quasi voluptates recusandae fugit est itaque ipsa,
+                     dignissimos ea dolorum
+                  </p>
+               </div>
+            </div>
+            <div class="mem-card">
+               <div class="mem-img mb-4">
+                  <img class="img-fluid" src="./assets/card1-img.jpg" alt="">
+               </div>
+               <div class="mem-card-content">
+                  <h4 class="mb-4 font-weight-bold"> <span>Head HR</span> <br> Mohamed Sherif</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Voluptatibus quasi voluptates recusandae fugit est itaque ipsa,
+                     dignissimos ea dolorum
+                  </p>
+               </div>
+            </div>
+            <div class="mem-card alternate">
+               <div class="mem-img mb-4">
+                  <img class="img-fluid" src="./assets/card1-img.jpg" alt="">
+               </div>
+               <div class="mem-card-content">
+                  <h4 class="mb-4 font-weight-bold"> <span>Head PR</span> <br> Mohamed Sherif</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Voluptatibus quasi voluptates recusandae fugit est itaque ipsa,
+                     dignissimos ea dolorum
+                  </p>
+               </div>
+            </div>
+         </div>
       </div>
+      
       <!-- footer -->
       <footer>
          <div class="footer-top">
@@ -301,14 +444,14 @@
                   <div class="col-md-3 col-sm-6 col-xs-12 segment-two mt-4">
                      <h2>Contact us</h2>
                      <ul>
-                        <li><a href='#'>Instagram</a></li>
-                        <li><a href='#'>Facebook</a></li>
-                        <li><a href='#'>Twitter</a></li>
+                        <li><a href='#'><i class="fa fa-phone mr-2"></i>+01000012100</a></li>
+                        <li><a href='#'><i class="fa fa-envelope mr-2"></i>Sci-Sys@gmail.com</a></li>
+                        <li><i class="fa fa-map-marker mr-2"></i>Cairo, Giza</li>
                      </ul>
                   </div>
                   <div class="col-md-3 col-sm-6 col-xs-12 segment-three mt-4">
                      <h2>Follow Us</h2>
-                     <p>sdgsdgsdg</p>
+                     <p>You can follow us on variety of platforms like</p>
                      <a href=""><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
                      <a href=""><i class="fa fa-instagram" style="font-size:24px"></i></a>
                      <a href=""><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
@@ -329,6 +472,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="./script.js"></script>
    </body>
 </html>
