@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- our styles -->
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="common.css">
       <!-- External css -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
@@ -52,7 +53,7 @@
             <li class="navbar-btn dropdown">
                <a href="#"> Articles <span class="fa fa-angle-down"></span></a>
                <ul class="dropdown-content">
-                  <li><a href="#"> Physics</a></li>
+                  <li><a href="#"> Physics </a></li>
                   <li><a href="#"> Chemistry </a></li>
                   <li><a href="#"> Biology </a></li>
                   <li><a href="#"> Astrology </a></li>
@@ -60,9 +61,12 @@
                </ul>
             </li>
             <li class="navbar-btn">
-               <a class="dropbtn" href="#"> <span class="fa fa-question-circle"></span> About Us</a>
+               <a class="dropbtn" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a>
             </li>
-            <li id="signBtn" class="navbar-btn">
+            <li class="navbar-btn">
+               <a class="dropbtn" href="ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a>
+            </li>
+            <li id="signBtn" class="navbar-btn ml-2">
                <a href="#">Sign in</a>
             </li>
          </ul>
@@ -79,13 +83,14 @@
                   <li><a class="text-decoration-none" href="#"> Psycology </a></li>
                </ul>
             </li>
-            <li class="sm-nav-link"><a class="text-decoration-none" href="#"><span class="fa fa-question-circle"></span> About US </a></li>
+            <li class="sm-nav-link"><a class="text-decoration-none" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
+            <li class="sm-nav-link"><a class="text-decoration-none" href="ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a></li>
             <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="#"> Sign in </a></li>
          </ul>
       </div>
 
       <!-- Header Section -->
-      <div class="header">
+      <div id="header" class="header">
          <div class="header-text col-md-5 col-sm-6 col-11 text-center text-sm-left">
             <h1 class="h1 mb-sm-4 mb-3">
                <svg height="300" width="200">
@@ -105,16 +110,21 @@
 
       <!-- Main part -->
       <div class="main pt-5">
+         <a href="#header" class="go-up text-white text-decoration-none">
+            <span class="fa fa-angle-up"></span>
+         </a>
          <div class="atoms">
             <img src="./assets/atom1.png" alt="">
             <img src="./assets/atom2.png" alt="">
          </div>
          <div class="dna">
-            <img src="./assets/dna.png" alt="">
-            <img src="./assets/dna.png" alt="">
-            <img src="./assets/dna.png" alt="">
-            <img src="./assets/dna.png" alt="">
-            <img src="./assets/dna.png" alt="">
+            <img src="./assets/dna.png" style="top: 100px; left: 10px;" alt="">
+            <img src="./assets/dna.png" style="top: 1000px; right: 20px;" alt="">
+            <img src="./assets/dna.png" style="top: 1500px; left: 35px;" alt="">
+            <img src="./assets/dna.png" style="top: 2000px; right: 40px;" alt="">
+            <img src="./assets/dna.png" style="top: 3000px; left: 15px;" alt="">
+            <img src="./assets/dna.png" style="bottom: 1500px; left: 50px;" alt="">
+            <img src="./assets/dna.png" style="bottom: 1000px; right: 40px;" alt="">
          </div>
          <div class="intro">
             <div class="col align-items-center justify-content-center text-center no-gutters">
@@ -374,10 +384,11 @@
 
          <!-- Meet the team section -->
          <div id="meetTeam" class="meet-team row justify-content-center align-items-center ml-3 mr-3 ml-md-5 mr-md-5 pb-7">
-            <div class="col-12 title">
+            <div class="row w-100 ml-sm-5 ml-4 pl-xl-5 title">
                <h2 class="bold-poppin">
-                  <span>Meet</span>
-                  the Team
+                  <span class="-living-coral">Meet</span>
+                  the
+                  <span class="-info">Team</span>
                </h2>
             </div>
             <div class="mem-card">
@@ -429,8 +440,93 @@
                </div>
             </div>
          </div>
+         
+         <!-- FAQ -->
+         <div class="faq pb-7">
+            <div class="faq-header row justify-content-center mb-5"><h2 class="bold-poppin text-center p-3">Frequently <span class="-info">Asked</span> Questions <i class="fa fa-question-circle -info"></i></h2></div>
+            <div class="container justify-content-center align-items-center">
+               <div id="accordion">
+                  <div class="card">
+                    <div class="card-header" data-toggle="collapse" href="#collapseOne">
+                      <a class="card-link">
+                        Question 1
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                      <div class="card-body">
+                        Answer 1
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                        </p>
+                      </div>
+                    </div>
+                  </div>              
+                  <div class="card">
+                    <div class="card-header" data-toggle="collapse" href="#collapseTwo">
+                      <a class="collapsed card-link">
+                        Question 2
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Answer 2
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" data-toggle="collapse" href="#collapseThree">
+                      <a class="collapsed card-link">
+                        Question 3
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Answer 3
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" data-toggle="collapse" href="#collapseFour">
+                       <a class="collapsed card-link">
+                         Question 4
+                       </a>
+                     </div>
+                     <div id="collapseFour" class="collapse" data-parent="#accordion">
+                       <div class="card-body">
+                         Answer 4
+                         <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                         </p>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="card">
+                     <div class="card-header" data-toggle="collapse" href="#collapseFive">
+                       <a class="collapsed card-link">
+                         Question 5
+                       </a>
+                     </div>
+                     <div id="collapseFive" class="collapse" data-parent="#accordion">
+                       <div class="card-body">
+                         Answer 5
+                         <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti ullam nostrum doloremque.
+                         </p>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+            </div>
+         </div>
       </div>
-      
+
       <!-- footer -->
       <footer>
          <div class="footer-top">
@@ -447,6 +543,7 @@
                         <li><a href='#'><i class="fa fa-phone mr-2"></i>+01000012100</a></li>
                         <li><a href='#'><i class="fa fa-envelope mr-2"></i>Sci-Sys@gmail.com</a></li>
                         <li><i class="fa fa-map-marker mr-2"></i>Cairo, Giza</li>
+                        <li><a href="./ContactUs/"><i class="fa fa-comments mr-2"></i>Contact us page</a></li>
                      </ul>
                   </div>
                   <div class="col-md-3 col-sm-6 col-xs-12 segment-three mt-4">

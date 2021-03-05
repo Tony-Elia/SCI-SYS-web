@@ -1,0 +1,19 @@
+{
+  "name": "sci-sys",
+  "version": "1.0.0",
+  "description": "Sci-Sys team web site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tony-Elia/SCI-SYS-Home-pg.git"
+  },
+  "author": "Sci-Sys web developers team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tony-Elia/SCI-SYS-Home-pg/issues"
+  },
+  "homepage": "https://github.com/Tony-Elia/SCI-SYS-Home-pg#readme"
+}
