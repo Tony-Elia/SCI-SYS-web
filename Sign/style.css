@@ -1,0 +1,78 @@
+#main {
+    min-height: 100vh;
+    background-color:var(--dark-blue-bg);
+}
+
+/* form */
+
+#main .col {
+    margin: auto;
+}
+
+#main .sign-form {
+    max-width: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 58px;
+    background: #010b3c;
+    box-shadow:  26px 26px 53px #010724,
+                 -26px -26px 53px #010f54;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input-box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-size: 16px;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.input-box .fa-eye {
+    position: absolute;
+    right: 0;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: var(--dark-blue-bg);
+    cursor: pointer;
+}
+
+.input-box input:focus ~ span,
+.input-box input:valid ~ span {
+    color: var(--living-coral);
+    font-size: 10px;
+    top: -20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid var(--living-coral);
+    outline: none;
+    color: white;
+    resize: none;
+    background-color: transparent;
+}
+
+.input-box input[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid var(--living-coral);
+    transition: .2s;
+    border-radius: 40px;
+    border-radius: 58px;
+    background: var(--living-coral);
+}
