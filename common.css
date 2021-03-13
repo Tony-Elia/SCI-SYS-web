@@ -11,6 +11,11 @@
 	--dark-blue-bg: #010b3c;
 }
 
+::selection {
+	color: white;
+	background-color: var(--living-coral);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -179,6 +184,10 @@ hr {
 	color: rgba(255, 255, 255, 0.7) !important;
 }
 
+.text-xs {
+	font-size: small !important;
+}
+
 @media (max-width: 576px) {
 	.text-sm,
 	p {
@@ -193,6 +202,27 @@ hr {
 	}
 }
 
+.lazy-load {
+	transition: .5s ease-in-out;
+	opacity: 0;
+}
+
+.lazy-load.load-left {
+	transform: translateX(-100px);
+}
+
+.lazy-load.load-right {
+	transform: translateX(100px);
+}
+
+.lazy-load.load-bottom {
+	transform: translateY(100px);
+}
+
+.lazy-load.show {
+	opacity: 1;
+	transform: none;
+}
 
 /* Nav bar */
 
@@ -598,4 +628,9 @@ footer h2 {
 	100% {
 		transform: translateY(0px);
 	}
+}
+
+/* Removing the water mark */
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+	display: none;
 }
