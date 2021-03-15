@@ -1,0 +1,28 @@
+#main {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color:var(--dark-blue-bg);
+}
+
+/* header */
+header {
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--living-coral);
+    clip-path: ellipse(72% 60% at 50% 40%);
+    margin-bottom: 5rem;
+}
+
+header span {
+    color: var(--warm-terqouise);
+}
+
+/* particles style */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

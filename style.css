@@ -36,7 +36,8 @@
 	justify-content: center;
 	flex-direction: column;
 	left: 20px;
-	top: 30%;
+	top: 50%;
+    transform: translateY(-50%);
 	padding: 20px 30px;
 	border-radius: 20px;
 	animation-delay: .5s;
@@ -81,7 +82,6 @@
 		height: 0;
 	}
 	.header-text {
-		top: 25%;
 		left: 15px;
 	}
 }
@@ -154,7 +154,7 @@
 
 .atoms img:nth-child(1) {
 	left: 5px;
-	top: 400px;
+	top: 900px;
 }
 
 .atoms img:nth-child(2) {
@@ -177,9 +177,14 @@
 	width: 100px;
 }
 
+/* logo */
+#logo img {
+	max-width: 200px;
+}
+
 /* Parteners */
 
-.parteners img {
+.parteners-imgs img {
 	width: 150px;
 }
 

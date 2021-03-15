@@ -61,7 +61,7 @@
                </ul>
             </li>
             <li class="navbar-btn">
-               <a class="dropbtn" href="../AboutUs/"> About Us <span class="fa fa-question-circle ml-1"></span></a>
+               <a class="dropbtn" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a>
             </li>
             <li class="navbar-btn">
                <a class="dropbtn" href="../ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a>
@@ -83,76 +83,59 @@
                   <li><a class="text-decoration-none" href="#"> Psycology </a></li>
                </ul>
             </li>
-            <li class="sm-nav-link"><a class="text-decoration-none" href="../AboutUs/"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
+            <li class="sm-nav-link"><a class="text-decoration-none" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
             <li class="sm-nav-link"><a class="text-decoration-none" href="../ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a></li>
             <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="#"> Sign in </a></li>
          </ul>
       </div>
 
-      <!-- Main -->
-      <div id="main" class="d-flex justify-content-center align-items-center pt-5">
-          <div class="container sign-in show">
-              <div class="col justify-content-center align-items-center">
-                    <form class="w-100 sign-form">
-                        <h2 class="mb-5 text-center">Sign in</h2>
-                        <div class="input-box">
-                            <input type="text" name="" required>
-                            <span>User Name</span>
-                        </div>
-                        <div class="input-box">
-                            <input id="passField" type="password" name="" maxlength="25" required>
-                            <span>Password</span>
-                            <i id="togglePass" class="fa fa-eye"></i>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="remember" name="example1">
-                            <label class="custom-control-label" for="remember">Remember me</label>
-                          </div>
-                        <div class="input-box">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form>
-                    <div class="pt-5 text-center text-xs">
-                       New here?
-                      <a id="newAcc" href="#">Create a new account</a>
-                    </div>
-              </div>
-          </div>
+      <div id="main">
+          <header>
+              <h1 class="bold-poppin text-center">The Simple <span> Funny </span> Science</h1>
+                <!-- particles.js container -->
+                <div id="particles-js"></div>
+                <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+                <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+          </header>
+      </div>
 
-          <!-- new account form -->
-          <div class="container sign-up">
-              <div class="col justify-content-center align-items-center">
-                  <form class="w-100 sign-form">
-                      <h2 class="mb-5 text-center">Sign up</h2>
-                      <div class="input-box">
-                          <input type="text" name="" required>
-                          <span>User Name</span>
-                      </div>
-                      <div class="input-box">
-                          <input type="email" name="" required>
-                          <span>Your Email</span>
-                      </div>
-                      <div class="input-box">
-                          <input id="passField1" type="password" name="" maxlength="25" required>
-                          <span> Create Password</span>
-                          <i id="togglePass1" class="fa fa-eye"></i>
-                      </div>
-                      <div class="input-box">
-                          <input id="passField2" type="password" name="" maxlength="25" required>
-                          <span> Rewrite Password</span>
-                          <i id="togglePass2" class="fa fa-eye"></i>
-                      </div>
-                      <div class="input-box">
-                          <input type="submit" value="Submit">
-                      </div>
-                  </form>
-                  <div class="pt-5 text-center text-xs">
-                     Have already an account?
-                    <a id="oldAcc" href="#">Sign In</a>
-                  </div>
+      <!-- footer -->
+      <footer>
+        <div class="footer-top">
+           <div class='container'>
+              <div class="row">
+                 <div class="col-md-3 col-sm-6 col-xs-12 segment-one mt-4">
+                    <h3>About Us</h3>
+                    <p> We are concerened in scientific fields</p>
+                    <p>like astronomy technology biology</p>
+                 </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12 segment-two mt-4">
+                    <h2>Contact us</h2>
+                    <ul>
+                       <li><a href='#'><i class="fa fa-phone mr-2"></i>+01000012100</a></li>
+                       <li><a href='#'><i class="fa fa-envelope mr-2"></i>Sci-Sys@gmail.com</a></li>
+                       <li><i class="fa fa-map-marker mr-2"></i>Cairo, Giza</li>
+                    </ul>
+                 </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12 segment-three mt-4">
+                    <h2>Follow Us</h2>
+                    <p>You can follow us on variety of platforms like</p>
+                    <a href=""><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+                    <a href=""><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                    <a href=""><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
+                    <a href=""><i class="fa fa-whatsapp" style="font-size:24px"></i></a>
+                 </div>
+                 <div class="col-md-3 col-sm-6 col-xs-12 segment-four mt-4">
+                    <h2>Important links</h2>
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                    <p>Link 4</p>
+                 </div>
               </div>
-          </div>
+           </div>
         </div>
+     </footer>
 
       <!-- bootstrap Js -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

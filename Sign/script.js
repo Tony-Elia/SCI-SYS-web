@@ -51,11 +51,11 @@ showHide2.addEventListener( "click", function () {
 
 
 newAccount.addEventListener("click", function () {
-    signIn.classList.add("d-none");
-    signUp.classList.remove("d-none");
+    signIn.style.transform = "translateX(-200%)";
+    signUp.style.transform = "translateX(-50%)";
 });
 
 oldAccount.addEventListener("click", function () {
-    signIn.classList.remove("d-none");
-    signUp.classList.add("d-none");
+    signIn.style.transform = "translateX(50%)";
+    signUp.style.transform = "translateX(200%)";
 });

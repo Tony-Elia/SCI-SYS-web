@@ -3,7 +3,6 @@
 #main {
     padding-top: 1px;
     min-height: calc(100vh - 321px);
-    padding-bottom: 3rem;
     background-color: var(--dark-bg);
     z-index: 1;
 }
@@ -29,6 +28,33 @@
     #main::before {
         width: 100%;
         background-position: center bottom;
+    }
+}
+
+.content {
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.shapes img {
+    position: absolute;
+    opacity: 0.5;
+}
+
+.shapes img:nth-child(1) {
+    bottom: 100px;
+    right: 70px;
+    width: 50px;
+}
+
+.shapes img:nth-child(2) {
+    top: 50px;
+    left: 20px;
+}
+
+@media (max-width: 960px) {
+    .shapes img:nth-child(2) {
+        left: 80%;
     }
 }
 
