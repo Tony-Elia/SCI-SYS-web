@@ -11,11 +11,14 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- Owl carousel -->
+      <link rel="stylesheet" href="../assets/OwlCarousel/dist/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="../assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
+      <!-- Meta -->
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Sign In</title>
+      <title>About Us</title>
    </head>
    <body>
-
       <!-- navigation bar -->
       <div class="nav-bar">
          <a class="logo pl-1" href="../">
@@ -60,7 +63,7 @@
                   <li><a href="#"> Psycology </a></li>
                </ul>
             </li>
-            <li class="navbar-btn">
+            <li class="navbar-btn active">
                <a class="dropbtn" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a>
             </li>
             <li class="navbar-btn">
@@ -83,65 +86,250 @@
                   <li><a class="text-decoration-none" href="#"> Psycology </a></li>
                </ul>
             </li>
-            <li class="sm-nav-link"><a class="text-decoration-none" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
+            <li class="sm-nav-link active"><a class="text-decoration-none" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
             <li class="sm-nav-link"><a class="text-decoration-none" href="../ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a></li>
             <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="#"> Sign in </a></li>
          </ul>
       </div>
-
+      
       <div id="main">
-          <header>
-              <h1 class="bold-poppin text-center">The Simple <span> Funny </span> Science</h1>
-                <!-- particles.js container -->
-                <div id="particles-js"></div>
-                <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-                <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-          </header>
+         <!--  Header -->
+         <header id="header">
+            <video autoplay muted loop>
+               <source src="../assets/About/head-vid.mp4">
+            </video>
+            <div class="overlay"></div>
+            <!-- particles.js container -->
+            <div id="particles-js"></div>
+            <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+            <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+            <div class="head text-center">
+               <h1 class="display-md-3 font-weight-bold">ABOUT US</h1>
+               <h1 class="mx-auto text-light">WHO ARE WE</h1>
+            </div>
+         </header>
+
+         <!--  mission -->
+         <div class="mission">
+            <div class="container">
+               <div class="row justify-content-center align-items-center">
+                  <div class="text col-lg-6 col-xs-12 col-md-12 pt-5 pb-5 lazy-load load-left">
+                     <h1 class="pb-2">OUR MISSION</h1>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Corrupti quasi possimus quaerat. Dolores adipisci alias magni tempore vero eum quidem, 
+                        numquam amet distinctio eos ea veritatis at minus blanditiis? Expedita!
+                     </p>
+                  </div>
+                  <div class="img col-lg-6 lazy-load load-right">
+                     <img class="img-fluid z-2" src="../assets/About/team-goal.svg">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--  services -->
+         <div id="services" class="services py-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="378.61" height="758.08" viewBox="0 0 378.61 758.08">
+               <path id="Path_5" data-name="Path 5" d="M687.05,448.08V257.14h26v-57H526.75v57h26V448.08a189.38,189.38,0,0,0-122.14,177c0,104.55,84.76,189.3,189.31,189.3s189.3-84.75,189.3-189.3A189.355,189.355,0,0,0,687.093,448.1Z" transform="translate(-430.61 -56.3)" fill="#96b7fe" opacity="0.9"/>
+               <rect id="Rectangle_1" data-name="Rectangle 1" width="134.34" height="2.57" transform="translate(122.1 200.25)" opacity="0.1"/>
+               <path id="Path_7" data-name="Path 7" d="M514,620s114-2,171-30.53,89.57-3.06,86.51,14.25-19.33,50.88-84.47,55S514,620,514,620Z" transform="translate(-430.61 -56.3)" opacity="0.1"/>
+               <path id="Path_8" data-name="Path 8" d="M465.18,601.7S453,770.65,612.75,773.7s158.77-170,158.77-170-59,64.11-198.46,11.19C573.06,614.93,500.8,595.59,465.18,601.7Z" transform="translate(-430.61 -56.3)" fill="#0b00b9"/>
+               <path id="Path_9" data-name="Path 9" d="M771,604.31c-3.19,38.92-23.88,160.75-158.19,158.18C481.15,760,466.24,644.9,465.07,604.41c-.73,21.73-.08,166.45,147.71,169.28,159.79,3,158.77-170,158.77-170S771.35,603.94,771,604.31Z" transform="translate(-430.61 -56.3)" opacity="0.1"/>
+               <circle id="Ellipse_9" data-name="Ellipse 9" cx="20.73" cy="20.73" r="20.73" transform="translate(162.38 451.77)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_10" data-name="Ellipse 10" cx="12.83" cy="12.83" r="12.83" transform="translate(182.12 376.74)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_11" data-name="Ellipse 11" cx="12.83" cy="12.83" r="12.83" transform="translate(153.49 302.69)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_12" data-name="Ellipse 12" cx="20.73" cy="20.73" r="20.73" transform="translate(135.22 64.28)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_13" data-name="Ellipse 13" cx="15.41" cy="15.41" r="15.41" transform="translate(202.73 34.06)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_14" data-name="Ellipse 14" cx="8.01" cy="8.01" r="8.01" transform="translate(165.71)" fill="#0b00b9" opacity="0.3"/>
+            </svg>
+            <div class="heading text-center pb-5">
+               <h2 class="font-weight-bold">Our Services</h2>
+            </div>
+            <div class="row mx-auto justify-content-center align-items-center">
+               <div class="col-lg-3 col-md-3 text-center service-card lazy-load load-bottom">
+                  <img class="img-fluid w-75" src="../assets/About/team-spirit.svg">
+                  <h4 class="font-weight-bold">Lorem ipsum</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit numquam repellendus expedita esse
+                  </p>
+               </div>
+               <div class="col-lg-3 col-md-3 text-center service-card lazy-load load-bottom">
+                  <img class="img-fluid w-75" src="../assets/About/team-spirit.svg">
+                  <h4 class="font-weight-bold">Lorem ipsum</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit numquam repellendus expedita esse
+                  </p>
+               </div>
+               <div class="col-lg-3 col-md-3 text-center service-card lazy-load load-bottom">
+                  <img class="img-fluid w-75" src="../assets/About/team-spirit.svg">
+                  <h4 class="font-weight-bold">Lorem ipsum</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit numquam repellendus expedita esse
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Experience -->
+         <div class="Experience">
+            <svg xmlns="http://www.w3.org/2000/svg" width="117.53" height="564.42" viewBox="0 0 167.53 616.42">
+               <path id="Path_11" data-name="Path 11" d="M390,319.48H222.47v49.69H248V756.83a58.247,58.247,0,1,0,116.495,0l-.005-387.66H390Z" transform="translate(-222.47 -198.66)" fill="#96b7fe" opacity="0.9"/>
+               <path id="Path_14" data-name="Path 14" d="M339.79,452.76V734.12a35.54,35.54,0,0,1-35.54,35.54h0a35.54,35.54,0,0,1-35.54-35.54V452.76s17.11-4.61,33.23,5.27S339.79,452.76,339.79,452.76Z" transform="translate(-222.47 -198.66)" fill="#0b00b9"/>
+               <rect id="Rectangle_2" data-name="Rectangle 2" width="116.49" height="2.29" transform="translate(25.51 170.2)" opacity="0.1"/>
+               <circle id="Ellipse_15" data-name="Ellipse 15" cx="7.24" cy="7.24" r="7.24" transform="translate(74.55 211.99)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_16" data-name="Ellipse 16" cx="4.61" cy="4.61" r="4.61" transform="translate(100.87 188.95)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_17" data-name="Ellipse 17" cx="4.61" cy="4.61" r="4.61" transform="translate(68.62 179.74)" fill="#0b00b9" opacity="0.3"/>
+               <path id="Path_16" data-name="Path 16" d="M257,510.24c-1.1,8.74-.88,19.68,6.93,23.76-6.56-3.42,20.3-42.19,16.49-50.12C272.25,467,258,502.13,257,510.24Z" transform="translate(-222.47 -198.66)" fill="#fff" opacity="0.2"/>
+               <circle id="Ellipse_18" data-name="Ellipse 18" cx="17.59" cy="17.59" r="17.59" transform="translate(79.22 54.55)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_19" data-name="Ellipse 19" cx="13.08" cy="13.08" r="13.08" transform="translate(30.96 28.9)" fill="#0b00b9" opacity="0.3"/>
+               <circle id="Ellipse_20" data-name="Ellipse 20" cx="6.8" cy="6.8" r="6.8" transform="translate(74.93)" fill="#0b00b9" opacity="0.3"/>
+            </svg>
+            <div class="container">
+               <div class="row justify-content-center align-items-center">
+                  <div class="img col-lg-6 lazy-load load-left z-2">
+                     <img class="img-fluid" src="../assets/About/team-experience.svg">
+                  </div>
+                  <div class="text col-lg-6 col-xs-12 col-md-12 pt-5 pb-5 lazy-load load-right">
+                     <h1 class="pb-2">Experience</h1>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Corrupti quasi possimus quaerat. Dolores adipisci alias magni tempore vero eum quidem, 
+                        numquam amet distinctio eos ea veritatis at minus blanditiis? Expedita!
+                     </p>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Corrupti quasi possimus quaerat. Dolores adipisci alias magni tempore vero eum quidem, 
+                        numquam amet distinctio eos ea veritatis at minus blanditiis? Expedita!
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- history -->
+         <div class="history">
+            <div class="container">
+               <div class="row justify-content-center align-items-center">
+                  <div class="text col-lg-6 col-xs-12 col-md-12 pt-5 pb-5 lazy-load load-left">
+                     <h1 class="pb-2">History</h1>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Corrupti quasi possimus quaerat. Dolores adipisci alias magni tempore vero eum quidem, 
+                        numquam amet distinctio eos ea veritatis at minus blanditiis? Expedita!
+                     </p>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Corrupti quasi possimus quaerat. Dolores adipisci alias magni tempore vero eum quidem, 
+                        numquam amet distinctio eos ea veritatis at minus blanditiis? Expedita!
+                     </p>
+                  </div>
+                  <div class="img d-flex justify-content-center align-items-center col-lg-6 lazy-load load-right">
+                     <img class="img-fluid" src="../assets/About/team-history.svg">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- best members -->
+         <div class="best-member pb-7">
+            <div class="container">
+               <div class="col justify-content-center align-items-center">
+                  <h1 class="bold-poppin mb-5 text-center">Best Members</h1>
+                  <div class="owl-carousel owl-theme container my-5 lazy-load load-bottom">
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">HR</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">Logistics</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">PR</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">Marketing</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">FR</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                     <div class="cards col">
+                        <span class="badge badge-pill badge-danger">Media</span>
+                        <img class="img-fluid" src="../assets/card1-img.jpg" alt="">
+                        <div class="mem-text">
+                           <h3 class="bold-poppin my-3">Name</h3>
+                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ea aperiam </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
 
+
+      <a href="#header" class="go-up text-white text-decoration-none" style="opacity: 1;">
+         <span class="fa fa-angle-up"></span>
+      </a>
       <!-- footer -->
       <footer>
-        <div class="footer-top">
-           <div class='container'>
-              <div class="row">
-                 <div class="col-md-3 col-sm-6 col-xs-12 segment-one mt-4">
-                    <h3>About Us</h3>
-                    <p> We are concerened in scientific fields</p>
-                    <p>like astronomy technology biology</p>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12 segment-two mt-4">
-                    <h2>Contact us</h2>
-                    <ul>
-                       <li><a href='#'><i class="fa fa-phone mr-2"></i>+01000012100</a></li>
-                       <li><a href='#'><i class="fa fa-envelope mr-2"></i>Sci-Sys@gmail.com</a></li>
-                       <li><i class="fa fa-map-marker mr-2"></i>Cairo, Giza</li>
-                    </ul>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12 segment-three mt-4">
-                    <h2>Follow Us</h2>
-                    <p>You can follow us on variety of platforms like</p>
-                    <a href=""><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
-                    <a href=""><i class="fa fa-instagram" style="font-size:24px"></i></a>
-                    <a href=""><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
-                    <a href=""><i class="fa fa-whatsapp" style="font-size:24px"></i></a>
-                 </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12 segment-four mt-4">
-                    <h2>Important links</h2>
-                    <p>Link 1</p>
-                    <p>Link 2</p>
-                    <p>Link 3</p>
-                    <p>Link 4</p>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </footer>
-
+         <div class="footer-top">
+            <div class='container'>
+               <div class="row">
+                  <div class="col-md-3 col-sm-6 col-xs-12 segment-one mt-4">
+                     <h3>About Us</h3>
+                     <p> We are concerened in scientific fields</p>
+                     <p>like astronomy technology biology</p>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12 segment-two mt-4">
+                     <h2>Contact us</h2>
+                     <ul>
+                        <li><a href='#'><i class="fa fa-phone mr-2"></i>+01000012100</a></li>
+                        <li><a href='#'><i class="fa fa-envelope mr-2"></i>Sci-Sys@gmail.com</a></li>
+                        <li><i class="fa fa-map-marker mr-2"></i>Cairo, Giza</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12 segment-three mt-4">
+                     <h2>Follow Us</h2>
+                     <p>You can follow us on variety of platforms like</p>
+                     <a href=""><i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+                     <a href=""><i class="fa fa-instagram" style="font-size:24px"></i></a>
+                     <a href=""><i class="fa fa-twitter-square" style="font-size:24px"></i></a>
+                     <a href=""><i class="fa fa-whatsapp" style="font-size:24px"></i></a>
+                  </div>
+                  <div class="col-md-3 col-sm-6 col-xs-12 segment-four mt-4">
+                     <h2>Important links</h2>
+                     <p>Link 1</p>
+                     <p>Link 2</p>
+                     <p>Link 3</p>
+                     <p>Link 4</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
       <!-- bootstrap Js -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <!-- Owl carousel Js -->
+      <script src="../assets/OwlCarousel/dist/owl.carousel.min.js"></script>
+      <!-- our Js -->
       <script src="../common.js"></script>
       <script src="./script.js"></script>
    </body>
