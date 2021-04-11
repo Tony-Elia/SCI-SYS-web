@@ -213,62 +213,6 @@ h3 {
 	height: 100%;
 }
 
-
-/* cards */
-
-.cards-section {
-	min-height: 500px;
-}
-
-.cards {
-	height: 400px;
-	width: 280px;
-	border-radius: 20px;
-	position: relative;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 1.5rem;
-	box-shadow: 10px 10px 50px black;
-	transition: .2s;
-}
-
-@media (max-width: 760px) {
-	.cards {
-		height: 350px;
-		width: 220px;
-	}
-}
-
-.cards:hover {
-	transform: translateY(-10px);
-	box-shadow: 20px 20px 90px black;
-}
-
-.card1 {
-	background-image: url('./assets/card1-img.jpg');
-}
-
-.card-img {
-	height: 50%;
-}
-
-.card-text {
-	position: absolute;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.1);
-	padding: 20px 20px !important;
-	border-radius: 20px;
-	backdrop-filter: blur(20px) !important;
-	border: 2px solid transparent;
-	background-clip: padding-box;
-	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-	bottom: 0;
-	left: 0;
-	margin: 0 !important;
-}
-
-
 /* Science Cards */
 
 .science-cards {
