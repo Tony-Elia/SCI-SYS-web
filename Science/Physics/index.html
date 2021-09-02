@@ -78,7 +78,7 @@
                </li>
             </ul>
             <ul class="sm-nav-links list-unstyled justify-content-center align-items-center">
-               <li class="sm-nav-link"><a class="text-decoration-none" href="../"><span class="fa fa-home"></span> Home </a></li>
+               <li class="sm-nav-link"><a class="text-decoration-none" href="../../"><span class="fa fa-home"></span> Home </a></li>
                <li class="sm-nav-link">
                   <a data-toggle="collapse" data-target="#articles" class="text-decoration-none" href="#"> Science <span class="fa fa-angle-down"></span></a>
                   <ul id="articles" class="col list-unstyled collapse justify-content-center align-items-center">
@@ -90,14 +90,14 @@
                      <li><a class="text-decoration-none" href="#"> Psycology </a></li>
                   </ul>
                </li>
-               <li class="sm-nav-link active"><a class="text-decoration-none" href="#"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
+               <li class="sm-nav-link active"><a class="text-decoration-none" href="../../AboutUs/"> About Us <span class="fa fa-question-circle ml-1"></span></a></li>
                <li class="sm-nav-link"><a class="text-decoration-none" href="../../ContactUs/"> Contact Us <span class="fa fa-comments ml-1"></span></a></li>
                <li class="sm-nav-link sm-sign-in"><a class="text-decoration-none" href="../../Sign/"> Sign in </a></li>
             </ul>   
          </div>
       </div>
       
-      <header>
+      <header id="header">
          <img class="phy-logo" src="../../assets/Science/physics/physics.svg" alt="Physics logo">
          <h2 class="mt-5">PHYSICS</h2>
          <div class="bg-img">
@@ -105,21 +105,21 @@
             <img src="../../assets/Science/physics/lever.svg" alt="">
             <img src="../../assets/Science/physics/pendulum.svg" alt="">
             <img src="../../assets/Science/physics/resources.svg" alt="">
+            <img class="d-md-block d-none" src="../../assets/Science/physics/prism.svg" alt="">
+            <img class="d-md-block d-none" src="../../assets/Science/physics/weight.svg" alt="">
+            <img class="d-md-block d-none" src="../../assets/Science/physics/collision.svg" alt="">
          </div>
       </header>
 
       <div id="main">
-         <!-- Breadcrumb Start -->
-        <div class="breadcrumb-wrap">
-         <div class="container">
-             <ul class="breadcrumb">
-                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                 <li class="breadcrumb-item active">Physics</li>
-             </ul>
+         <!-- Search box -->
+         <div class="search-box my-5">
+            <div class="search-bar">
+               <input type="text" name="search" id="input" onkeydown="search()" placeholder="Search by title...">
+               <i class="fa fa-search"></i>
+            </div>
          </div>
-     </div>
-     <!-- Breadcrumb End -->
-     
+
      <!-- Single News Start-->
      <div class="single-news">
          <div class="container">
@@ -128,19 +128,19 @@
                      <div class="sidebar">
                          <div class="sidebar-widget">
                              <div class="tab-news">
-                                 <ul class="nav nav-pills nav-justified" style="margin-bottom: 3rem;">
-                                    <li><h2 class="m-sm">Filter By :</h2></li>
-                                     <li class="nav-item">
-                                         <a class="nav-link active" data-toggle="pill" href="#featured">All</a>
+                                 <ul class="nav nav-pills nav-justified d-flex align-items-center" style="margin-bottom: 3rem;">
+                                    <li><h2 class="text-md mb-2 mb-sm-0">Filter By :</h2></li>
+                                     <li class="nav-item mb-2 mb-sm-0">
+                                         <a class="nav-link text-md active" data-toggle="pill" href="#featured">All</a>
                                      </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" data-toggle="pill" href="#popular">Articles</a>
+                                     <li class="nav-item mb-2 mb-sm-0">
+                                         <a class="nav-link text-md" data-toggle="pill" href="#popular">Articles</a>
                                      </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" data-toggle="pill" href="#latest">Video</a>
+                                     <li class="nav-item mb-2 mb-sm-0">
+                                         <a class="nav-link text-md" data-toggle="pill" href="#latest">Video</a>
                                      </li>
-                                     <li class="nav-item">
-                                       <a class="nav-link" data-toggle="pill" href="#podcasts">Podcasts</a>
+                                     <li class="nav-item mb-2 mb-sm-0">
+                                       <a class="nav-link text-md" data-toggle="pill" href="#podcasts">Podcasts</a>
                                    </li>
                                  </ul>
 

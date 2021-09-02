@@ -201,6 +201,12 @@ hr {
 	}
 }
 
+@media (max-width: 768px) {
+	.text-md {
+		font-size: small !important;
+	}
+}
+
 .lazy-load {
 	transition: .5s ease-in-out;
 	opacity: 0;

@@ -1,15 +1,36 @@
-// particles Js
-particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+// search bar code
+function search() {
+    var input = document.getElementById("input");
+    var filter = input.value.toUpperCase();
+    var tiles = $(".tn-news");
+    for (let i = 0; i < tiles.length; i++) {
+        const textContent = tiles[i].childNodes[3].childNodes[1].childNodes[1].innerText;
+        if (textContent.toUpperCase().indexOf(filter) > -1) {
+            tiles[i].style.display = "";
+        } else {
+            tiles[i].style.display = "none";
+        }
+    }
+};
 
-// Owl carousel
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        loop: false,
-        nav: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        autoWidth:true,
-        loop: true,
-        center: true
-    });
-  });
+// search bar animation
+var input = document.getElementById('input');
+var message = document.getElementsByClassName('fa-search')[0];
+var animationTime = 400;
+input.addEventListener('focus', function() {
+    message.style.display = 'none';
+    message.style.transition = `cubic-bezier(0.68, -0.55, 0.27, 1.55) ${animationTime}ms`
+});
+message.addEventListener("click", function() {
+   input.focus();
+});
+message.addEventListener("click", function() {
+   input.focus();
+});
+input.addEventListener('focusout', function() {
+   setTimeout(() => {
+          message.style.display = 'flex';
+
+   },  animationTime)
+
+});

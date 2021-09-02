@@ -11,27 +11,38 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
-    margin-top: 3rem;
+    padding-bottom: 3rem;
+    padding-top: 6rem;
 }
 
 header img.phy-logo {
-    width: 75%;
+    width: 60%;
 }
 
 .bg-img {
     position: absolute;
-    top: 0;
+    top: 2rem;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
 .bg-img img {
     position: absolute;
-    opacity: .7;
+    opacity: .5;
     width: 220px;
     z-index: -1;
+}
+
+@media (max-width: 576px) {
+    .bg-img {
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+    .bg-img img{
+        width: 150px;
+    }
 }
 
 .bg-img img:nth-child(1) {
@@ -55,240 +66,106 @@ header img.phy-logo {
     top: 85%;
 }
 
+.bg-img img:nth-child(5) {
+    left: 25%;
+    top: -5%;
+}
+
+.bg-img img:nth-child(6) {
+    right: 20%;
+    top: 35%;
+}
+
+.bg-img img:nth-child(7) {
+    left: 20%;
+    top: 50%;
+}
+
 @media (min-width: 576px) {
     header img.phy-logo {
         width: 300px !important;
     }
 }
 
-/* particles style */
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 555 !important;
-}
- 
-/* Missions */
-.mission{
-    background-color: black;
-    overflow: hidden;
+/* Single News CSS */
+.container {
+    max-width: 900px !important;
 }
 
-.mission .text{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+/* search box */
+
+.search-box .search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-animation: ani cubic-bezier(0.68, -0.55, 0.27, 1.55) 800ms forwards;
+          animation: ani cubic-bezier(0.68, -0.55, 0.27, 1.55) 800ms forwards;
+}
+.search-box .search-bar i.fa {
+  position: absolute;
+  display: flex;
+  cursor: pointer;
+  color: black;
+  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 520ms;
+}
+.search-box .search-bar i.fa:hover ~ input {
+  transform: scale(1.18);
+}
+.search-box .search-bar input {
+  max-width: 500px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: #232323;
+  font-size: normal;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 10px 20px #171C28;
+  outline: none;
+  transition: all cubic-bezier(0.68, -0.55, 0.37, 1.55) 720ms;
+}
+.search-box .search-bar input:focus {
+    width: 50%;
+    transform: scale(1.18);
+}
+@media (max-width: 768px) {
+    .search-box .search-bar input:focus {
+        width: 70%;
+      }
+}
+.search-box .search-bar input:focus i {
+  display: none;
+}
+.search-box .search-bar input:hover {
+  transform: scale(1.18);
 }
 
-.mission .text h1{
-    font-weight: bold;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-}
-
-.mission .text p{
-    opacity: .8;
-}
-
-/* Services */
-.services{
-    position: relative;
-    background-color: black;
-}
-
-.services svg{
-    position: absolute;
-    opacity: .6;
-    margin-top: 100px;
-    margin-left: -50px;
-    z-index: 1;
-}
-
-.services h2{
-    color: white;
-    text-transform: uppercase;
-    margin-top: 150px !important;
-}
-.service-card{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 280px !important;
-    margin: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    transition: .4s ease-in-out;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 30px 0 rgba( 31, 38, 135, 0.5 );
-    backdrop-filter: blur( 10.5px );
-    -webkit-backdrop-filter: blur( 10.5px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    z-index: 5;
-}
-.service-card img{
-    margin: auto;
-    padding-top: 10px;
-}
-
-
-@media screen and (max-width:800px){
-    .service-card img{
-        max-width: 300px !important;
-    }
-    .service-card h4 {
-    font-weight: bold;
-    padding: 10px 5px;
-    }
-}
-
-/* Experience */
-.Experience{
-    position: relative;
-    background-color: black;
-    padding-top: 250px;
-    max-width: 100%;
-}
-
-.Experience svg{
-    position: absolute;
-    left: 85%;
-    opacity: .6;
-    bottom: -150px;
-    z-index: 1;
-}
-
-.Experience .text{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    z-index: 5;
-}
-
-.Experience .text h1{
-    font-weight: bold;
-    font-size: 50px;
-    color: white;
-}
-
-.Experience .text p{
-    opacity: .8;
-}
-
-/* History */
-.history{
-    position: relative;
-    background-color: black;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.history .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: auto;
-}
-
-.history .text h1{
-    font-weight: bold;
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-}
-
-.history .text p{
-    opacity: .8;
-}
-
-/* best members */
-.owl-carousel {
-    max-width: 500px;
-}
-
-.owl-prev,
-.owl-next {
-    transition: .25s;
-}
-
-.owl-prev span,
-.owl-next span {
-    font-size: 40px;
-    padding: 25px;
-}
-
-@media (max-width: 576px) {
-    .best-member .container {
-        padding: 0;
-    }    
-}
-
-.best-member .cards {
-    position: relative;
-    width: 280px;
-    border-radius: 15px;
-    background-color: var(--dark-blue);
-    padding: 0;
-    margin: 0 2rem;
-}
-
-.best-member .cards::before {
-    content: "";
-    position: absolute;
-    top: 55%;
-    right: 10px;
-    transform: scaleX(-1);
-    background-image: url("../assets/About/celebration.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 60px;
-    height: 60px;
-}
-
-.best-member .cards .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: 500;
-    font-size: 12pt;
-}
-
-.best-member .cards img {
-    border-radius: 15px;
-}
-
-.best-member .cards .mem-text {
-    padding: 15px 20px;
-}
-
-/* btn */
-body > a {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    bottom: 40px;
-    right: 10px;
-    background-color: var(--dark-blue);
-    font-size: 1.3rem;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: .5s;
-    z-index: 99;
+@-webkit-keyframes ani {
+  0% {
     opacity: 0;
+    transform: translatey(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0px);
+  }
 }
 
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: translatey(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
 
-
-
-
-
-/**********************************/
-/********* Single News CSS ********/
-/**********************************/
 .single-news {
     position: relative;
     width: 100%;
@@ -426,11 +303,9 @@ body > a {
     margin-bottom: 45px;
 }
 
-.sidebar .sidebar-widget h2.sw-title {
+.sidebar .sidebar-widget h2 {
     color: #fff;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 3px double #000000;
+    font-size: 18pt;
 }
 
 .sidebar .sidebar-widget .news-list {
@@ -475,19 +350,26 @@ body > a {
 .sidebar .tab-news .nav.nav-pills .nav-link {
     color: #000000;
     background: #fff;
-    border-radius: 10%;
+    border-radius: 50px;
     margin-right: 5%;
     margin-left: 5%;
+    transition: .25s;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar .tab-news .nav.nav-pills .nav-link:hover,
 .sidebar .tab-news .nav.nav-pills .nav-link.active {
     color: #ffffff;
-    background: #FF6F61;
+    background: var(--living-coral);
 }
 
 .sidebar .tab-news .tab-content {
     padding: 15px 0 0 0;
+    margin-left: 2rem;
     background: transparent;
 }
 
@@ -497,6 +379,7 @@ body > a {
 
 .sidebar .tab-news .tn-news {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 3rem;
 }
 
@@ -518,9 +401,6 @@ body > a {
     }
     .sidebar .tab-news .tn-title a h3 + p {
         display: none;
-    }
-    .m-sm {
-        font-size: small !important;
     }
     .sidebar .tab-news .tn-img a i{
         padding: .6rem !important;
@@ -591,7 +471,7 @@ body > a {
 }
 
 .sidebar .category ul li span {
-    display: inline-block;
+    display: block;
     float: right;
 }
 
