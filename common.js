@@ -24,8 +24,10 @@ function scrollFunction() {
   if (goUp) {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
       goUp.style.opacity = "1";
+      goUp.style.pointerEvents = "all";
     } else {
       goUp.style.opacity = "0";
+      goUp.style.pointerEvents = "none";
     }
   }
 };
