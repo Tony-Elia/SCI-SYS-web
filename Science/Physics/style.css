@@ -439,6 +439,9 @@ header img.phy-logo {
     .tn-title {
         padding-left: 1rem !important;
     }
+    .search-bar input {
+        font-size: x-small !important;
+    }
 }
 
 .sidebar .tab-news .tn-title a {
