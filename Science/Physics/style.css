@@ -13,6 +13,7 @@ header {
     align-items: center;
     padding-bottom: 3rem;
     padding-top: 6rem;
+    overflow-x: clip;
 }
 
 header img.phy-logo {
@@ -392,18 +393,27 @@ header img.phy-logo {
     width: 270px;
 }
 
-@media (max-width: 999px){
+@media (max-width: 768px){
     .sidebar .tab-news .tn-img img{
-        width: 135px;
+        width: 100px;
     }
     .sidebar .tab-news .tn-title a h3{
-        font-size: 1rem !important;
+        font-size: .7rem !important;
     }
     .sidebar .tab-news .tn-title a h3 + p {
         display: none;
     }
     .sidebar .tab-news .tn-img a i{
         padding: .6rem !important;
+    }
+    .tab-content {
+        margin-left: 1rem !important;
+    }
+    .tn-news {
+        margin-bottom: 1.5rem !important;
+    }
+    .tn-title a p:nth-child(3) {
+        font-size: x-small !important;
     }
 }
 
@@ -421,8 +431,14 @@ header img.phy-logo {
 }
 
 .sidebar .tab-news .tn-title {
-    padding: 0 0 0 2rem;
+    padding-left: 2rem;
     text-align: left;
+}
+
+@media (max-width: 576px) {
+    .tn-title {
+        padding-left: 1rem !important;
+    }
 }
 
 .sidebar .tab-news .tn-title a {

@@ -115,7 +115,7 @@
          <!-- Search box -->
          <div class="search-box my-5">
             <div class="search-bar">
-               <input type="text" name="search" id="input" onkeydown="search()" placeholder="Search by title...">
+               <input type="text" name="search" id="input" onkeydown="search()" onkeypress="search()" onkeyup="search()" placeholder="Search by title...">
                <i class="fa fa-search"></i>
             </div>
          </div>
@@ -146,7 +146,7 @@
 
                                  <div class="tab-content">
                                      <div id="featured" class="container tab-pane active">
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
                                          </div>
@@ -158,7 +158,7 @@
                                             </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                              <div class="tn-img">
                                                  <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/D7FEF745-E31B-4610-8DFB0C78A70B6A02_agenda.jpg?w=275&h=154&fit=crop" /></a>
                                              </div>
@@ -170,7 +170,7 @@
                                                 </a>
                                              </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
                                          </div>
@@ -182,7 +182,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9BBFFB7A-F759-4E82-AEE579E3B20B1E43_agenda.png?w=275&h=154&fit=crop" />
@@ -198,7 +198,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
@@ -214,7 +214,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DAFCF042-8C09-40F1-85DC62B8FC9DF4CA_agenda.jpg?w=275&h=154&fit=crop" />
@@ -230,7 +230,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
@@ -247,7 +247,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9558E7B2-BA75-40F3-B5B790EF74B7D11E_agenda.jpg?w=275&h=154&fit=crop" />
@@ -263,7 +263,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/D4F6B2E4-42DE-4F8C-9C61FE976D873DA1_agenda.jpg?w=275&h=154&fit=crop" />
@@ -281,7 +281,7 @@
                                          </div>
                                      </div>
                                      <div id="popular" class="container tab-pane fade">
-                                       <div class="tn-news">
+                                       <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
                                          </div>
@@ -293,7 +293,7 @@
                                             </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                              <div class="tn-img">
                                                  <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/D7FEF745-E31B-4610-8DFB0C78A70B6A02_agenda.jpg?w=275&h=154&fit=crop" /></a>
                                              </div>
@@ -305,7 +305,7 @@
                                                 </a>
                                              </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
                                          </div>
@@ -319,7 +319,7 @@
                                          </div>
                                      </div>
                                      <div id="latest" class="container tab-pane fade">
-                                       <div class="tn-news">
+                                       <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9BBFFB7A-F759-4E82-AEE579E3B20B1E43_agenda.png?w=275&h=154&fit=crop" />
@@ -335,7 +335,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
@@ -351,7 +351,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DAFCF042-8C09-40F1-85DC62B8FC9DF4CA_agenda.jpg?w=275&h=154&fit=crop" />
@@ -369,7 +369,7 @@
                                          </div>
                                      </div>
                                      <div id="podcasts" class="container tab-pane fade">
-                                       <div class="tn-news">
+                                       <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
@@ -386,7 +386,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-right">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9558E7B2-BA75-40F3-B5B790EF74B7D11E_agenda.jpg?w=275&h=154&fit=crop" />
@@ -402,7 +402,7 @@
                                              </a>
                                          </div>
                                          </div>
-                                         <div class="tn-news">
+                                         <div class="tn-news lazy-load load-left">
                                           <div class="tn-img">
                                              <a href="">
                                                 <img src="https://static.scientificamerican.com/sciam/cache/file/D4F6B2E4-42DE-4F8C-9C61FE976D873DA1_agenda.jpg?w=275&h=154&fit=crop" />
