@@ -375,11 +375,6 @@ hr {
 }
 
 
-/* Show the dropdown menu on hover */
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
 
 .logo {
 	z-index: 10;
@@ -390,9 +385,15 @@ hr {
 	cursor: pointer;
 }
 
-.logo svg {
+.logo img {
 	width: 80px;
 	height: 50px;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 .sm-nav-links {
@@ -455,7 +456,7 @@ hr {
 	.logo {
 		z-index: 10;
 	}
-	.logo svg {
+	.logo img {
 		width: 70px;
 		height: 45px;
 	}
