@@ -37,6 +37,16 @@ hr {
 	border-color: white !important;
 }
 
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
 .modal-top-center {
 	top: 20px !important;
 	left: 50% !important;
@@ -130,6 +140,7 @@ hr {
 .btn-primary {
 	background-color: var(--living-coral) !important;
 	border: 0 !important;
+	box-shadow: none !important;
 }
 
 .btn-primary:hover {
@@ -226,6 +237,42 @@ hr {
 .lazy-load.show {
 	opacity: 1;
 	transform: none;
+}
+
+.read-more {
+	margin-right: auto;
+    margin-left: auto;
+    background: transparent;
+    color: white !important;
+    outline: none;
+    border: 3.5px solid var(--living-coral) !important;
+    border-radius: 15px !important;
+    padding: 5px 5px 5px 10px !important;
+    box-shadow: none !important;
+	transition: .25s;
+}
+
+.read-more::after {
+	content: '➜';
+    margin-left: 10px;
+    background-color: var(--living-coral);
+    padding: 2px 10px;
+    border-radius: 35%;
+	transition: 0.25s;
+}
+
+.read-more:hover {
+	background: var(--living-coral);
+}
+
+.read-more:hover::after {
+	background: #b53449;
+}
+
+label,
+input[type="radio"],
+.cursor-pointer {
+	cursor: pointer;
 }
 
 /* Nav bar */
@@ -471,7 +518,7 @@ hr {
 		cursor: pointer;
 		right: -5px;
 		padding-top: 44px;
-		margin: 5px 7px;
+		margin: 9px 7px;
 		transform: translate(-5%, -50%) scale(0.8);
 		z-index: 2;
 	}

@@ -81,31 +81,44 @@
             <div class="modal-content">
                <div class="modal-body">
                   <h4>Sort By:</h4>
-                  <form class="mt-3">
+                  <form class="mt-3 col">
                      <div class="custom-control custom-radio custom-control-inline">
-                       <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
-                       <label class="custom-control-label" for="customRadio">Recent</label>
+                       <input type="radio" class="custom-control-input" id="newest" name="noName">
+                       <label class="custom-control-label" for="newest">Newest (Default)</label>
                      </div>
                      <div class="custom-control custom-radio custom-control-inline">
-                       <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
-                       <label class="custom-control-label" for="customRadio2">Custom radio 2</label>
+                       <input type="radio" class="custom-control-input" id="oldest" name="noName">
+                       <label class="custom-control-label" for="oldest">Oldest</label>
                      </div>
                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="customRadio3" name="example" value="customEx">
-                        <label class="custom-control-label" for="customRadio3">Custom radio 2</label>
+                        <input type="radio" class="custom-control-input" id="topRatted" name="noName">
+                        <label class="custom-control-label" for="topRatted">Top ratted</label>
                      </div>
-                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="customRadio4" name="example" value="customEx">
-                        <label class="custom-control-label" for="customRadio4">Custom radio 2</label>
-                     </div>
-                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="customRadio5" name="example" value="customEx">
-                        <label class="custom-control-label" for="customRadio5">Custom radio 2</label>
-                     </div>
-                     <br><br>
-                     <button type="button" class="btn btn-danger btn-sm mr-auto" data-dismiss="modal">Close</button>
-                     <button type="submit" class="btn btn-info btn-sm ml-auto" data-dismiss="modal">Apply</button>
                   </form>
+                  <hr class="w-75">
+                  <h4>Choose a specific category:</h4>
+                  <form class="mt-3 col">
+                     <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="all" name="noName">
+                        <label class="custom-control-label" for="all">All (Default)</label>
+                      </div>
+                     <div class="custom-control custom-radio custom-control-inline">
+                       <input type="radio" class="custom-control-input" id="electricity" name="noName">
+                       <label class="custom-control-label" for="electricity">Electricity</label>
+                     </div>
+                     <div class="custom-control custom-radio custom-control-inline">
+                       <input type="radio" class="custom-control-input" id="electronicPhysics" name="noName">
+                       <label class="custom-control-label" for="electronicPhysics">Electronic Physics</label>
+                     </div>
+                     <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="thermodynamics" name="noName">
+                        <label class="custom-control-label" for="thermodynamics">Thermodynamics</label>
+                     </div>
+                  </form>
+                  <div class="row justify-content-end m-0 p-0 pt-3">
+                     <button type="button" class="btn btn-danger btn-sm mx-2" data-dismiss="modal">Close</button>
+                     <button type="submit" class="btn btn-info btn-sm" data-dismiss="modal" onclick="applyFilter()">Apply</button>
+                  </div>
                </div>
             </div>
          </div>
@@ -140,16 +153,16 @@
                      <ul class="nav nav-pills nav-justified d-flex align-items-center justify-content-center mb-5">
                         <li></li>
                         <li class="nav-item mb-2 mb-sm-0">
-                           <a class="nav-link text-md active" data-toggle="pill" href="#featured">All</a>
+                           <a class="nav-link text-md cursor-pointer active" data-toggle="pill">All</a>
                         </li>
                         <li class="nav-item mb-2 mb-sm-0">
-                           <a class="nav-link text-md" data-toggle="pill" href="#popular">Articles</a>
+                           <a class="nav-link text-md" data-toggle="pill" href="#article">Articles</a>
                         </li>
                         <li class="nav-item mb-2 mb-sm-0">
-                           <a class="nav-link text-md" data-toggle="pill" href="#latest">Video</a>
+                           <a class="nav-link text-md" data-toggle="pill" href="#videos">Videos</a>
                         </li>
                         <li class="nav-item mb-2 mb-sm-0">
-                           <a class="nav-link text-md" data-toggle="pill" href="#podcasts">News</a>
+                           <a class="nav-link text-md" data-toggle="pill" href="#news">News</a>
                         </li>
                         <li class="nav-item mb-2 mb-sm-0">
                            <a class="nav-link text-md" data-toggle="pill" href="#quiz">Quiz</a>
@@ -158,282 +171,156 @@
                            <i class="fa fa-sliders nav-link" data-toggle="modal" data-target="#sortingModal"></i>
                         </li>
                      </ul>
+                     <!-- tabs -->
                      <div class="tab-content">
-                        <div id="featured" class="container tab-pane active">
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                        <h4 class="tabs-titles lazy-load load-left text-sm">Articles</h4>
+                        <div id="article" class="container tab-pane fade in active show">
+                              <div class="tn-news lazy-load load-left" category="thermodynamics">
+                                 <div class="tn-img">
+                                    <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>Scientists Supersize Quantum Effects with Entangled Drum Duet</h3>
+                                       <p>Two teams have demonstrated new degrees of quantum measurements in micron-sized metal drums...</p>
+                                       <p>May 6, 2021</p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
-                                    <h3>Scientists Supersize Quantum Effects with Entangled Drum Duet</h3>
-                                    <p>Two teams have demonstrated new degrees of quantum measurements in micron-sized metal drums...</p>
-                                    <p>May 6, 2021</p>
-                                 </a>
+                              <div class="tn-news lazy-load load-right" category="electricity">
+                                 <div class="tn-img">
+                                    <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/D7FEF745-E31B-4610-8DFB0C78A70B6A02_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>Physicists Edge Closer to Taming the Three-Body Problem</h3>
+                                       <p>A new model cuts through the chaos to reach the best-yet predictions of complex gravitational interactions...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/D7FEF745-E31B-4610-8DFB0C78A70B6A02_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                              <div class="tn-news lazy-load load-left" category="electronicPhysics">
+                                 <div class="tn-img">
+                                    <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
+                                       <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
-                                    <h3>Physicists Edge Closer to Taming the Three-Body Problem</h3>
-                                    <p>A new model cuts through the chaos to reach the best-yet predictions of complex gravitational interactions...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/"><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
-                                    <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
-                                    <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9BBFFB7A-F759-4E82-AEE579E3B20B1E43_agenda.png?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="../article/scientists-supersize-quantum-effects-with-entangled-drum-duet/">
-                                    <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
-                                    <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Tackling China's Devastating Yellow River Floods</h3>
-                                    <p>After learning how the waterway transports a billion tons of sediment into the sea each year, scientists built a tool that may help predict the inundations that impact some 80 million people...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DAFCF042-8C09-40F1-85DC62B8FC9DF4CA_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Soft, Sticky Frog Tongues Slurp Supper</h3>
-                                    <p>Scientists discovered a frog’s ability to nab an insect in a fraction of a second depends on the fluid mechanics of its spit...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>PHYSICS
-                                       Big Physics News: The Muon g-2 Experiment Explained
-                                    </h3>
-                                    <p>Particles called muons are behaving weirdly, and that could mean a huge discovery...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9558E7B2-BA75-40F3-B5B790EF74B7D11E_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Science News Briefs from around the Planet</h3>
-                                    <p>Here are some brief reports about science and technology from all over, including one about how a lizard population responded to hurricanes by developing larger and stickier toe pads on average...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/D4F6B2E4-42DE-4F8C-9C61FE976D873DA1_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>No, No Nobel: How to Lose the Prize</h3>
-                                    <p>Physicist Brian Keating talks about his book Losing the Nobel Prize: A Story of Cosmology, Ambition, and the Perils of Science’s Highest Honor.</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
                         </div>
-                        <div id="popular" class="container tab-pane fade">
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                        <h4 class="tabs-titles lazy-load load-left text-sm">Videos</h4>
+                        <div id="videos" class="container tab-pane fade in">
+                              <div class="tn-news lazy-load load-right" category="electricity">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/9BBFFB7A-F759-4E82-AEE579E3B20B1E43_agenda.png?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-play"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
+                                       <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Scientists Supersize Quantum Effects with Entangled Drum Duet</h3>
-                                    <p>Two teams have demonstrated new degrees of quantum measurements in micron-sized metal drums...</p>
-                                    <p>May 6, 2021</p>
-                                 </a>
+                              <div class="tn-news lazy-load load-left">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-play"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>Tackling China's Devastating Yellow River Floods</h3>
+                                       <p>After learning how the waterway transports a billion tons of sediment into the sea each year, scientists built a tool that may help predict the inundations that impact some 80 million people...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/D7FEF745-E31B-4610-8DFB0C78A70B6A02_agenda.jpg?w=275&h=154&fit=crop" /></a>
+                              <div class="tn-news lazy-load load-right" category="electricity">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/DAFCF042-8C09-40F1-85DC62B8FC9DF4CA_agenda.jpg?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-play"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>Soft, Sticky Frog Tongues Slurp Supper</h3>
+                                       <p>Scientists discovered a frog’s ability to nab an insect in a fraction of a second depends on the fluid mechanics of its spit...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Physicists Edge Closer to Taming the Three-Body Problem</h3>
-                                    <p>A new model cuts through the chaos to reach the best-yet predictions of complex gravitational interactions...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
-                                    <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
                         </div>
-                        <div id="latest" class="container tab-pane fade">
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9BBFFB7A-F759-4E82-AEE579E3B20B1E43_agenda.png?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
+                        <h4 class="tabs-titles lazy-load load-left text-sm">News</h4>
+                        <div id="news" class="container tab-pane fade in">
+                              <div class="tn-news lazy-load load-left" category="electricity">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-headphones"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>PHYSICS
+                                          Big Physics News: The Muon g-2 Experiment Explained
+                                       </h3>
+                                       <p>Particles called muons are behaving weirdly, and that could mean a huge discovery...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>First Nuclear Detonation Created ‘Impossible’ Quasicrystals</h3>
-                                    <p>Their structures were once controversial. Now researchers have discovered quasicrystals in the aftermath of a 1945 bomb test...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
+                              <div class="tn-news lazy-load load-right" category="thermodynamics">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/9558E7B2-BA75-40F3-B5B790EF74B7D11E_agenda.jpg?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-headphones"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>Science News Briefs from around the Planet</h3>
+                                       <p>Here are some brief reports about science and technology from all over, including one about how a lizard population responded to hurricanes by developing larger and stickier toe pads on average...</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
+                              <div class="tn-news lazy-load load-left" category="thermodynamics">
+                                 <div class="tn-img">
+                                    <a href="">
+                                    <img src="https://static.scientificamerican.com/sciam/cache/file/D4F6B2E4-42DE-4F8C-9C61FE976D873DA1_agenda.jpg?w=275&h=154&fit=crop" />
+                                    <i class="fa fa-headphones"></i>
+                                    </a>
+                                 </div>
+                                 <div class="tn-title">
+                                    <a href="">
+                                       <h3>No, No Nobel: How to Lose the Prize</h3>
+                                       <p>Physicist Brian Keating talks about his book Losing the Nobel Prize: A Story of Cosmology, Ambition, and the Perils of Science’s Highest Honor.</p>
+                                       <p>June 6, 2021 </p>
+                                    </a>
+                                 </div>
                               </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Tackling China's Devastating Yellow River Floods</h3>
-                                    <p>After learning how the waterway transports a billion tons of sediment into the sea each year, scientists built a tool that may help predict the inundations that impact some 80 million people...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DAFCF042-8C09-40F1-85DC62B8FC9DF4CA_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-play"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Soft, Sticky Frog Tongues Slurp Supper</h3>
-                                    <p>Scientists discovered a frog’s ability to nab an insect in a fraction of a second depends on the fluid mechanics of its spit...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
                         </div>
-                        <div id="podcasts" class="container tab-pane fade">
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>PHYSICS
-                                       Big Physics News: The Muon g-2 Experiment Explained
-                                    </h3>
-                                    <p>Particles called muons are behaving weirdly, and that could mean a huge discovery...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-right">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/9558E7B2-BA75-40F3-B5B790EF74B7D11E_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>Science News Briefs from around the Planet</h3>
-                                    <p>Here are some brief reports about science and technology from all over, including one about how a lizard population responded to hurricanes by developing larger and stickier toe pads on average...</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                           <div class="tn-news lazy-load load-left">
-                              <div class="tn-img">
-                                 <a href="">
-                                 <img src="https://static.scientificamerican.com/sciam/cache/file/D4F6B2E4-42DE-4F8C-9C61FE976D873DA1_agenda.jpg?w=275&h=154&fit=crop" />
-                                 <i class="fa fa-headphones"></i>
-                                 </a>
-                              </div>
-                              <div class="tn-title">
-                                 <a href="">
-                                    <h3>No, No Nobel: How to Lose the Prize</h3>
-                                    <p>Physicist Brian Keating talks about his book Losing the Nobel Prize: A Story of Cosmology, Ambition, and the Perils of Science’s Highest Honor.</p>
-                                    <p>June 6, 2021 </p>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                        <div id="quiz" class="tab-pane fade d-flex align-items-center">
-                           <h3 class="d-flex justify-content-center lazy-load load-bottom">Coming Soon...</h3>
-                           <img class="img-fluid lazy-load load-bottom" src="../../assets/Science/physics/under-construction.svg" alt="">
+                        <div id="quiz" class="tab-pane fade in align-items-center">
+                              <h3 class="d-flex justify-content-center lazy-load load-bottom">Coming Soon...</h3>
+                              <img class="img-fluid lazy-load load-bottom" src="../../assets/Science/physics/under-construction.svg" alt="">
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <!-- Single News End-->
       </div>
+      <!-- up arrow -->
       <a href="#header" class="go-up text-white text-decoration-none">
       <span class="fa fa-angle-up"></span>
       </a>

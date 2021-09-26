@@ -1,8 +1,9 @@
+var tiles = $(".tn-news");
+
 // search bar code
 function search() {
     var input = document.getElementById("input");
     var filter = input.value.toUpperCase();
-    var tiles = $(".tn-news");
     for (let i = 0; i < tiles.length; i++) {
         const textContent = tiles[i].childNodes[3].childNodes[1].childNodes[1].innerText;
         if (textContent.toUpperCase().indexOf(filter) > -1) {
@@ -34,3 +35,108 @@ input.addEventListener('focusout', function() {
    },  animationTime)
 
 });
+
+// filtering method
+const allCategories = document.getElementById("all");
+const electricity = document.getElementById("electricity");
+const electronicPhysics = document.getElementById("electronicPhysics");
+const thermodynamics = document.getElementById("thermodynamics");
+const newest = document.getElementById("newest");
+const oldest = document.getElementById("oldest");
+const topRatted = document.getElementById("topRatted");
+
+function applyFilter() {
+    // categories
+    if (allCategories.checked) {
+        fadeIn = $(".tn-news");
+        for (let i = 0; i < fadeIn.length; i++) {
+            const tile = fadeIn[i];
+            tile.classList.remove("hidden");
+        }
+
+    } else if (electricity.checked) {
+        fadeIn = $(".tn-news");
+        for (let i = 0; i < fadeIn.length; i++) {
+            const tile = fadeIn[i];
+            tile.classList.remove("hidden");
+        }
+        fadeOut = $(".tn-news:not([category='electricity'])");
+        console.log(fadeOut);
+        for (let i = 0; i < fadeOut.length; i++) {
+            const tile = fadeOut[i];
+            tile.classList.add("hidden");
+            console.log(tile);
+        }
+
+    } else if (electronicPhysics.checked) {
+        fadeIn = $(".tn-news");
+        for (let i = 0; i < fadeIn.length; i++) {
+            const tile = fadeIn[i];
+            tile.classList.remove("hidden");
+        }
+        fadeOut = $(".tn-news:not([category='electronicPhysics'])");
+        console.log(fadeOut);
+        for (let i = 0; i < fadeOut.length; i++) {
+            const tile = fadeOut[i];
+            tile.classList.add("hidden");
+        }
+
+    } else if (thermodynamics.checked) {
+        fadeIn = $(".tn-news");
+        for (let i = 0; i < fadeIn.length; i++) {
+            const tile = fadeIn[i];
+            tile.classList.remove("hidden");
+        }
+        fadeOut = $(".tn-news:not([category='thermodynamics'])");
+        console.log(fadeOut);
+        for (let i = 0; i < fadeOut.length; i++) {
+            const tile = fadeOut[i];
+            tile.classList.add("hidden");
+        }
+    };
+
+    if (newest.checked) {
+        console.log("newest");
+    } else if (oldest.checked) {
+        console.log("oldest");
+    } else if (topRatted.checked) {
+        console.log("top ratted");
+    };
+    //  iterating dates
+    for (let i = 0; i < tiles.length; i++) {
+        const date = tiles[i].childNodes[3].childNodes[1].childNodes[5].innerText;
+    };
+};
+
+// Setup for the tabs
+const article = document.getElementById("article");
+const videos = document.getElementById("videos");
+const news = document.getElementById("news");
+const quiz = document.getElementById("quiz");
+const tabsTitles = $('.tabs-titles');
+
+$('.nav-pills a:not(.cursor-pointer)').click(function () {
+    article.classList.remove("active", "show");
+    videos.classList.remove("active", "show");
+    news.classList.remove("active", "show");
+    for (let i = 0; i < tabsTitles.length; i++) {
+        const title = tabsTitles[i];
+        title.style.display = "none";
+    };
+});
+
+$('.nav-pills a.cursor-pointer').click(function(){
+    article.classList.add("active", "show");
+    videos.classList.add("active", "show");
+    news.classList.add("active", "show");
+    quiz.classList.remove("active", "show");
+    for (let i = 0; i < tabsTitles.length; i++) {
+        const title = tabsTitles[i];
+        title.style.display = "block";
+    };
+});
+
+article.classList.add("active", "show");
+videos.classList.add("active", "show");
+news.classList.add("active", "show");
+quiz.classList.remove("active", "show");
