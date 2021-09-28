@@ -83,7 +83,7 @@
                   <h4>Sort By:</h4>
                   <form class="mt-3 col">
                      <div class="custom-control custom-radio custom-control-inline">
-                       <input type="radio" class="custom-control-input" id="newest" name="noName">
+                       <input type="radio" class="custom-control-input" id="newest" name="noName" checked>
                        <label class="custom-control-label" for="newest">Newest (Default)</label>
                      </div>
                      <div class="custom-control custom-radio custom-control-inline">
@@ -91,15 +91,15 @@
                        <label class="custom-control-label" for="oldest">Oldest</label>
                      </div>
                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="topRatted" name="noName">
-                        <label class="custom-control-label" for="topRatted">Top ratted</label>
+                        <input type="radio" class="custom-control-input" id="topRated" name="noName">
+                        <label class="custom-control-label" for="topRated">Top rated</label>
                      </div>
                   </form>
                   <hr class="w-75">
                   <h4>Choose a specific category:</h4>
                   <form class="mt-3 col">
                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="all" name="noName">
+                        <input type="radio" class="custom-control-input" id="all" name="noName" checked>
                         <label class="custom-control-label" for="all">All (Default)</label>
                       </div>
                      <div class="custom-control custom-radio custom-control-inline">
@@ -173,9 +173,9 @@
                      </ul>
                      <!-- tabs -->
                      <div class="tab-content">
-                        <h4 class="tabs-titles lazy-load load-left text-sm">Articles</h4>
+                        <h4 class="tabs-titles bold-poppin lazy-load load-left text-sm">Articles</h4>
                         <div id="article" class="container tab-pane fade in active show">
-                              <div class="tn-news lazy-load load-left" category="thermodynamics">
+                              <div class="tn-news lazy-load load-left" category="thermodynamics" toprated>
                                  <div class="tn-img">
                                     <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/6D6A6C4B-1950-40CD-9B374920F181FAC2_agenda.jpg?w=275&h=154&fit=crop" /></a>
                                  </div>
@@ -186,6 +186,7 @@
                                        <p>May 6, 2021</p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                               <div class="tn-news lazy-load load-right" category="electricity">
                                  <div class="tn-img">
@@ -198,8 +199,9 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
-                              <div class="tn-news lazy-load load-left" category="electronicPhysics">
+                              <div class="tn-news lazy-load load-left" category="electronicPhysics" toprated>
                                  <div class="tn-img">
                                     <a href=""><img src="https://static.scientificamerican.com/sciam/cache/file/FD166015-3BBC-42F3-956B3ADAA6AB05DB_source.jpg?w=590&h=800&F2D26C0D-6449-4E8B-AAECEDEDB6E56522" /></a>
                                  </div>
@@ -210,9 +212,10 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                         </div>
-                        <h4 class="tabs-titles lazy-load load-left text-sm">Videos</h4>
+                        <h4 class="tabs-titles bold-poppin lazy-load load-left text-sm">Videos</h4>
                         <div id="videos" class="container tab-pane fade in">
                               <div class="tn-news lazy-load load-right" category="electricity">
                                  <div class="tn-img">
@@ -228,8 +231,9 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
-                              <div class="tn-news lazy-load load-left">
+                              <div class="tn-news lazy-load load-left" category="thermodynamics" toprated>
                                  <div class="tn-img">
                                     <a href="">
                                     <img src="https://static.scientificamerican.com/sciam/cache/file/BE41EAA4-E7EB-43EF-9EF0442891C36A0A_agenda.jpg?w=275&h=154&fit=crop" />
@@ -243,6 +247,7 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                               <div class="tn-news lazy-load load-right" category="electricity">
                                  <div class="tn-img">
@@ -258,11 +263,12 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                         </div>
-                        <h4 class="tabs-titles lazy-load load-left text-sm">News</h4>
+                        <h4 class="tabs-titles bold-poppin lazy-load load-left text-sm">News</h4>
                         <div id="news" class="container tab-pane fade in">
-                              <div class="tn-news lazy-load load-left" category="electricity">
+                              <div class="tn-news lazy-load load-left" category="electricity" toprated>
                                  <div class="tn-img">
                                     <a href="">
                                     <img src="https://static.scientificamerican.com/sciam/cache/file/DBC9DEC9-E0D0-49E3-AEA20419CB062EA1_agenda.jpg?w=275&h=154&fit=crop" />
@@ -278,6 +284,7 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                               <div class="tn-news lazy-load load-right" category="thermodynamics">
                                  <div class="tn-img">
@@ -293,6 +300,7 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                               <div class="tn-news lazy-load load-left" category="thermodynamics">
                                  <div class="tn-img">
@@ -308,6 +316,7 @@
                                        <p>June 6, 2021 </p>
                                     </a>
                                  </div>
+                                 <img class="star-badge" src="../../assets/Science/top-rated.png" alt="star badge">
                               </div>
                         </div>
                         <div id="quiz" class="tab-pane fade in align-items-center">

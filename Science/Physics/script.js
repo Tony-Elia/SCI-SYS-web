@@ -43,7 +43,22 @@ const electronicPhysics = document.getElementById("electronicPhysics");
 const thermodynamics = document.getElementById("thermodynamics");
 const newest = document.getElementById("newest");
 const oldest = document.getElementById("oldest");
-const topRatted = document.getElementById("topRatted");
+const topRated = document.getElementById("topRated");
+
+function filterOut(hiddenElements, returnAll) {
+    if (returnAll) {
+        fadeIn = $(".tn-news");
+        for (let i = 0; i < fadeIn.length; i++) {
+            const tile = fadeIn[i];
+            tile.classList.remove("hidden");
+        }
+    };
+    fadeOut = hiddenElements;
+    for (let i = 0; i < fadeOut.length; i++) {
+        const tile = fadeOut[i];
+        tile.classList.add("hidden");
+    }
+}
 
 function applyFilter() {
     // categories
@@ -53,58 +68,40 @@ function applyFilter() {
             const tile = fadeIn[i];
             tile.classList.remove("hidden");
         }
-
     } else if (electricity.checked) {
-        fadeIn = $(".tn-news");
-        for (let i = 0; i < fadeIn.length; i++) {
-            const tile = fadeIn[i];
-            tile.classList.remove("hidden");
-        }
-        fadeOut = $(".tn-news:not([category='electricity'])");
-        console.log(fadeOut);
-        for (let i = 0; i < fadeOut.length; i++) {
-            const tile = fadeOut[i];
-            tile.classList.add("hidden");
-            console.log(tile);
-        }
+        filterOut($(".tn-news:not([category='electricity'])"), true);
 
     } else if (electronicPhysics.checked) {
-        fadeIn = $(".tn-news");
-        for (let i = 0; i < fadeIn.length; i++) {
-            const tile = fadeIn[i];
-            tile.classList.remove("hidden");
-        }
-        fadeOut = $(".tn-news:not([category='electronicPhysics'])");
-        console.log(fadeOut);
-        for (let i = 0; i < fadeOut.length; i++) {
-            const tile = fadeOut[i];
-            tile.classList.add("hidden");
-        }
-
+        filterOut($(".tn-news:not([category='electronicPhysics'])"), true);
     } else if (thermodynamics.checked) {
-        fadeIn = $(".tn-news");
-        for (let i = 0; i < fadeIn.length; i++) {
-            const tile = fadeIn[i];
-            tile.classList.remove("hidden");
-        }
-        fadeOut = $(".tn-news:not([category='thermodynamics'])");
-        console.log(fadeOut);
-        for (let i = 0; i < fadeOut.length; i++) {
-            const tile = fadeOut[i];
-            tile.classList.add("hidden");
-        }
+        filterOut($(".tn-news:not([category='thermodynamics'])"), true);
     };
+
+    // sorting
+    const tabPanes = $(".tab-pane:not(#quiz)");
 
     if (newest.checked) {
-        console.log("newest");
+        for (let i = 0; i < tabPanes.length; i++) {
+            const tabPane = tabPanes[i];
+            if(tabPane.classList.contains("active")) {
+                tabPane.classList.remove("oldest");
+            }
+        }
     } else if (oldest.checked) {
-        console.log("oldest");
-    } else if (topRatted.checked) {
-        console.log("top ratted");
-    };
-    //  iterating dates
-    for (let i = 0; i < tiles.length; i++) {
-        const date = tiles[i].childNodes[3].childNodes[1].childNodes[5].innerText;
+        for (let i = 0; i < tabPanes.length; i++) {
+            const tabPane = tabPanes[i];
+            if(tabPane.classList.contains("active")) {
+                tabPane.classList.add("oldest");
+            }
+        }
+    } else if (topRated.checked) {
+        for (let i = 0; i < tabPanes.length; i++) {
+            const tabPane = tabPanes[i];
+            if (tabPane.classList.contains("active")) {
+                tabPane.classList.remove("oldest");
+            }
+        }
+        filterOut($(".tn-news:not([toprated])"), false)
     };
 };
 
@@ -136,6 +133,7 @@ $('.nav-pills a.cursor-pointer').click(function(){
     };
 });
 
+// activating all the tabs
 article.classList.add("active", "show");
 videos.classList.add("active", "show");
 news.classList.add("active", "show");
