@@ -3,6 +3,8 @@ const navlinks = document.querySelector(".sm-nav-links");
 const navbar = document.querySelector(".nav-bar");
 const goUp = document.querySelector(".go-up");
 const lazyTargets = document.querySelectorAll(".lazy-load");
+// const navShadow = $(".nav-bar .nav-links::after")[0];
+// console.log(navShadow);
 
 // toggling the navbar on mobile screens
 hamburger.addEventListener("click", () =>{

@@ -7,6 +7,7 @@
 	--living-coral: #e94560;
 	--warm-terqouise: #29c7ac;
 	--light-green: #6eff63;
+	--sun-glow: #ffc727;
 	--dark-bg: #00010a;
 	--dark-blue-bg: #010b3c;
 }
@@ -177,12 +178,24 @@ hr {
 	font-weight: 600;
 }
 
+.monospace {
+	font-family: monospace;
+}
+
+.wide {
+	letter-spacing: 3pt;
+}
+
 .-info {
 	color: var(--warm-terqouise);
 }
 
 .-living-coral {
 	color: var(--living-coral);
+}
+
+.-sun-glow {
+	color: var(--sun-glow);
 }
 
 .z-2{
@@ -204,16 +217,16 @@ hr {
 	}
 	h3,
 	h2 {
-		font-size: 18pt !important;
-	}
-	h1 {
-		font-size: 22pt !important;
+		font-size: large !important;
 	}
 }
 
 @media (max-width: 768px) {
 	.text-md {
 		font-size: small !important;
+	}
+	h1 {
+		font-size: x-large !important;
 	}
 }
 
@@ -296,6 +309,7 @@ input[type="radio"],
 }
 
 .nav-bar .nav-links {
+	position: relative;
 	list-style: none;
 	margin-left: auto;
 	margin-right: 30px;
@@ -446,8 +460,8 @@ input[type="radio"],
 .sm-nav-links {
 	display: none;
 }
-
-@media (max-width: 760px) {
+/* collapsing the nav bar */
+@media (max-width: 900px) {
 	.nav-bar {
 		position: fixed;
 		top: 0;
@@ -516,9 +530,10 @@ input[type="radio"],
 	.hamburger {
 		position: absolute;
 		cursor: pointer;
+    	top: 9px;
 		right: -5px;
-		padding-top: 44px;
-		margin: 9px 7px;
+		margin-top: 16px;
+		margin-right: 9px;
 		transform: translate(-5%, -50%) scale(0.8);
 		z-index: 2;
 	}
